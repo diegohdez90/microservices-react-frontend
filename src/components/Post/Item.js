@@ -1,5 +1,6 @@
 import React from 'react';
 import CreateComment from '../Comment/Create';
+import ListComments from '../Comment/List';
 
 const Item = ({ post }) => {
   return (
@@ -12,6 +13,9 @@ const Item = ({ post }) => {
     >
       <div className="card-body">
         <h3>{post.title}</h3>
+        <ListComments
+          id={post.id}
+        />
         <CreateComment
           id={post.id}
         />
