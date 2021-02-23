@@ -14,7 +14,7 @@ const Item = ({ post }) => {
       <div className="card-body">
         <h3>{post.title}</h3>
         <ListComments
-          id={post.id}
+          comments={post.comments}
         />
         <CreateComment
           id={post.id}
