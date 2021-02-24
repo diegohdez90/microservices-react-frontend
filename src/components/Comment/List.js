@@ -5,12 +5,14 @@ const List = ({
   comments
 }) => {
 
-  const commentItems = comments.map(comment => (
-    <CommentItem
-      key={comment.id}
-      comment={comment}
-    />
-  ));
+  const commentItems = comments
+    .filter(comment => comment.status === 'APPROVED')
+    .map(comment => (
+      <CommentItem
+        key={comment.id}
+        comment={comment}
+      />
+    ));
 
   return (
     <ul>
